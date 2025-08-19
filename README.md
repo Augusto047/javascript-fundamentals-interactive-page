@@ -2,7 +2,7 @@
 
 A compact lab to showcase JavaScript fundamentals in action: variables, conditionals, functions, loops, and DOM — all in a single, easy-to-read project, crafted with pure CSS & JS.
 
-**Live Demo (GitHub Pages):** _Add your Pages URL here after publishing_
+**Live Demo (GitHub Pages):** [https://augusto047.github.io/javascript-fundamentals-interactive-page/](https://augusto047.github.io/javascript-fundamentals-interactive-page/)
 
 ## 🚀 Key Features
 - **Basics:** typed inputs → conditional categorization
