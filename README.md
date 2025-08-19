@@ -1,6 +1,6 @@
 # Constellation Lab — Mastering JavaScript Fundamentals
 
-Crafted with pure CSS & JS
+Crafted with pure CSS & JS 
 A compact lab to showcase **JavaScript fundamentals** in action: variables, conditionals, functions, loops, and DOM — all in a single, easy-to-read project.
 
 **Live Demo (GitHub Pages):** _Add your Pages URL here after publishing_
