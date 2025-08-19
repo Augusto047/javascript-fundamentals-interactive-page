@@ -1,0 +1,281 @@
+/* ==========================================================================\n   Constellation Lab — JavaScript Fundamentals\n    Stylesheet\n   ========================================================================== */
+
+/* Root design tokens (CSS variables) */
+:root {
+  /* Dark theme colors */
+  --bg: #0e1116;
+  --surface: #141922;
+  --text: #e6e9f0;
+  --muted: #aab0be;
+  --brand: #3b82f6;
+  --brand2: #22c55e;
+  --ring: #ffffff;
+
+  /* Other properties */
+  --radius: 14px;
+  --container: min(110ch, 92vw);
+}
+
+/* Light theme colors */
+body.light-theme {
+  --bg: #f5f6f9;
+  --surface: #ffffff;
+  --text: #1d2129;
+  --muted: #5e6677;
+  --brand: #2986cc;
+  --brand2: #16a085;
+  --ring: #000000;
+}
+
+/* Global resets & base */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background: radial-gradient(900px 600px at 10% 0%, #141922, #0e1116);
+  color: var(--text);
+  font: 16px/1.6 Inter, system-ui, Segoe UI, Roboto, Ubuntu, Cantarell, Arial, sans-serif;
+  transition: background-color 0.5s ease;
+}
+
+a {
+  color: #cfe0ff;
+}
+
+.container {
+  width: var(--container);
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+/* Skip link (for accessibility) */
+.skip-link {
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-start: 0;
+  transform: translateY(-120%);
+  background: var(--brand);
+  color: #041220;
+  padding: 0.5rem 0.75rem;
+  border-bottom-right-radius: 8px;
+  z-index: 99;
+  transition: transform 0.2s ease-in-out;
+}
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* Site header style */
+.site-header {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(6px);
+  background: #12161fdd;
+  border-bottom: 1px solid #20293a;
+  z-index: 10;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  flex-wrap: wrap;
+}
+
+/* Nav style */
+.nav-list {
+  display: flex;
+  gap: 0.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+.nav-list a {
+  display: inline-block;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+}
+.nav-list a:hover {
+  background: #1a2130;
+}
+
+/* Button styles */
+.btn {
+  display: inline-block;
+  padding: 0.6rem 0.9rem;
+  border-radius: 999px;
+  background: #1a2130;
+  color: #f1f5ff;
+  border: 1px solid #223047;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+.btn.primary {
+  background: linear-gradient(135deg, var(--brand2), var(--brand));
+  border: none;
+  color: #041220;
+}
+.btn:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+/* Panel style (content cards) */
+.panel {
+  background: var(--surface);
+  border: 1px solid #20293a;
+  border-radius: var(--radius);
+  padding: 2rem;
+  margin-top: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.4s ease;
+}
+
+/* New class to change the entire panel background */
+.panel--colored {
+  background-color: var(--brand2);
+}
+
+/* Form styles */
+#userForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+#domSection.grid {
+  align-items: stretch;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+}
+input[type='text'],
+input[type='number'] {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid var(--muted);
+  background: transparent;
+  color: var(--text);
+  margin-top: 0.25rem;
+}
+input:focus {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+/* Output style */
+.output {
+  margin-top: 1rem;
+  background: #20293a;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  border: 1px dashed var(--muted);
+  min-height: 2.3rem;
+  display: flex;
+  align-items: center;
+}
+.list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+/* New CSS for list alignment */
+.list.left-align {
+  align-items: flex-start;
+}
+.list.right-align {
+  align-items: flex-end;
+}
+.list li {
+  background: #20293a;
+  padding: 0.5rem;
+  border-radius: var(--radius);
+}
+.muted {
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+/* Style for the new DOM functionality */
+.hidden {
+  display: none;
+}
+
+/* ======================================================================\n   Footer - Adjustments for the new layout\n   ====================================================================== */
+
+.footer-grid {
+  display: grid;
+  gap: 2rem;
+  /* Define the column layout for larger screens */
+  grid-template-columns: 1fr 2fr 1fr; 
+  padding-block: 2rem 1rem;
+}
+
+/* Optional: Center the text in the side columns on larger screens */
+@media (min-width: 768px) {
+  .footer-grid section:first-child {
+    justify-self: start;
+    text-align: left;
+  }
+  .footer-grid section:last-child {
+    justify-self: end;
+    text-align: right;
+  }
+}
+
+/* Styling for the new "impactful" section */
+.footer-mission {
+  text-align: center;
+  /* Use a different font style for a special touch */
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  color: var(--muted);
+}
+
+/* Center copyright text in footer */
+.legal {
+  text-align: center;
+}
+
+/* Remove os bullets padrão */
+.site-footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Estiliza os links e adiciona o símbolo após o texto */
+.site-footer ul li a {
+  position: relative;
+  display: inline-block;
+  padding-right: 1.5rem; /* Adiciona espaço para o símbolo */
+}
+
+/* O pseudo-elemento que cria a estrela */
+.site-footer ul li a::after {
+  content: '★';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--brand);
+}

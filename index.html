@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Mastering JavaScript Fundamentals — variables, conditionals, functions, loops, and DOM." />
+  <title>Constellation Lab — Mastering JavaScript Fundamentals</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <img src="assets/logo.svg" alt="" width="160" height="40" />
+      <nav aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="#basics">Basics</a></li>
+          <li><a href="#functions">Functions</a></li>
+          <li><a href="#loops">Loops</a></li>
+          <li><a href="#dom">DOM</a></li>
+        </ul>
+      </nav>
+      <button id="themeBtn" class="btn primary">Toggle Theme</button>
+    </div>
+  </header>
+  <main id="main" class="container">
+    <section id="basics" aria-labelledby="basics-title" class="panel">
+      <h1 id="basics-title">Part 1 — JavaScript Basics</h1>
+      <p>Enter your name and age; we will categorize and greet you.</p>
+      <form id="userForm">
+        <div class="grid">
+          <label>Name
+            <input id="nameInput" type="text" placeholder="Your Name" />
+          </label>
+          <label>Age
+            <input id="ageInput" type="number" placeholder="e.g., 25" />
+          </label>
+          <button id="submitBtn" type="submit" class="btn primary">Submit</button>
+        </div>
+        <p id="greet" class="output" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section id="functions" aria-labelledby="functions-title" class="panel">
+      <h2 id="functions-title">Part 2 — Functions</h2>
+      <p>Calculate your age based on your birth year.</p>
+      <div class="grid">
+        <label>Birth Year
+          <input id="birthYearInput" type="number" placeholder="e.g., 1990" />
+        </label>
+        <button id="birthYearBtn" class="btn primary">Calculate</button>
+      </div>
+      <p id="ageOut" class="output" aria-live="polite"></p>
+    </section>
+
+    <section id="loops" aria-labelledby="loops-title" class="panel">
+      <h2 id="loops-title">Part 3 — Loops</h2>
+      <p>Generated with loops: a countdown and a starred list.</p>
+      <div class="grid">
+        <button id="countdownBtn" class="btn primary">Start 5 → 0</button>
+        <button id="starsBtn" class="btn primary">Generate 6 Stars</button>
+      </div>
+      <ul id="listOut" class="list"></ul>
+    </section>
+    
+    <section id="dom" aria-labelledby="dom-title" class="panel">
+      <h2 id="dom-title">Part 4 — DOM Interactions</h2>
+      <ul>
+        <li>Listening to clicks (buttons above)</li>
+        <li>Changing text content and classes</li>
+        <li>Creating and appending elements dynamically</li>
+      </ul>
+      <div class="grid" id="domSection">
+        <button id="domBtn1" class="btn primary">Change Color</button>
+        <button id="domBtn2" class="btn primary">Toggle Paragraph</button>
+      </div>
+      <p id="toggleText" class="output">This paragraph's visibility is controlled by the Toggle Paragraph button above.</p>
+      <p class="muted">Explore the console to see logged steps.</p>
+    </section>
+  </main>
+  <footer class="site-footer" id="contact" role="contentinfo">
+  <div class="container footer-grid">
+    <section aria-label="Contact">
+      <h3>Contact</h3>
+      <ul>
+        <li>Augusto Mate</li>
+        <li><a href="mailto:mate.augusto.mz@gmail.com">mate.augusto.mz@gmail.com</a></li>
+      </ul>
+    </section>
+
+    <section class="footer-mission" aria-label="Project Mission">
+      <p>
+        We build constellations from lines of code, where every pixel is a star and every function, a new universe.
+      </p>
+    </section>
+
+    <section aria-label="Links">
+  <h3>Links</h3>
+  <ul>
+    <li><a href="#basics">Basics</a></li>
+    <li><a href="#functions">Functions</a></li>
+    <li><a href="#loops">Loops</a></li>
+    <li><a href="#dom">DOM</a></li>
+  </ul>
+</section>
+  </div>
+  <p class="legal">© <span id="year"></span> 2025 Constellation Lab</p>
+</footer>
+  
+  <audio id="clickSound" src="assets/sounds/click.mp3" preload="auto"></audio>
+  
+  <script src="script.js"></script>
+</body>
+</html>
