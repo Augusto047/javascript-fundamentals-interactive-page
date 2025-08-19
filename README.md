@@ -39,4 +39,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 Constellation Lab — Crafted with pure CSS & JS
+
 _“Small, focused examples make fundamentals unforgettable.”_
