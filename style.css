@@ -257,20 +257,20 @@ input:focus {
   text-align: center;
 }
 
-/* Remove os bullets padrão */
+/* Removes default bullets */
 .site-footer ul {
   list-style: none;
   padding: 0;
 }
 
-/* Estiliza os links e adiciona o símbolo após o texto */
+/* Styles the links and adds the symbol after the text */
 .site-footer ul li a {
   position: relative;
   display: inline-block;
-  padding-right: 1.5rem; /* Adiciona espaço para o símbolo */
+  padding-right: 1.5rem; /* Adds space for the symbol */
 }
 
-/* O pseudo-elemento que cria a estrela */
+/* The pseudo-element that creates the star */
 .site-footer ul li a::after {
   content: '★';
   position: absolute;
@@ -278,4 +278,5 @@ input:focus {
   top: 50%;
   transform: translateY(-50%);
   color: var(--brand);
+
 }
